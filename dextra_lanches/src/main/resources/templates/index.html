@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Dextra Lanches</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="/js/controller.js"></script>
+	<link rel="stylesheet" href="/css/uikit.css" />
+	<script src="/js/uikit.min.js"></script>
+	<script src="/js/uikit-icons.min.js"></script>
+</head>
+<body class="uk-background-blend-darken">
+
+	<div class="container" ng-app="app">
+
+		<div ng-controller="postcontroller"
+			class="uk-card uk-card-body uk-card-title">
+			<h1>Dextra Lanches</h1>
+
+			<form class="uk-form-stacked" name="customerForm"
+				ng-submit="submitForm()">
+				<fieldset class="uk-fieldset">
+
+					<legend class="uk-legend">Tipo de Lanche:</legend>
+					<div class="uk-margin">
+						<div class="uk-form-controls">
+							<input class="uk-radio" type="radio" ng-model="nomeDoLanche"
+								value="xbacon" checked="checked" name="radio1" /> X-Bacon<br />
+							<input class="uk-radio" type="radio" ng-model="nomeDoLanche"
+								value="xburger" name="radio1" /> X-Burger<br /> <input
+								class="uk-radio" type="radio" ng-model="nomeDoLanche"
+								value="xegg" name="radio1" /> X-Egg<br /> <input
+								class="uk-radio" type="radio" ng-model="nomeDoLanche"
+								value="xeggbacon" name="radio1" /> X-Egg Bacon<br />
+						</div>
+					</div>
+
+					<legend class="uk-legend">Adicione Porções!!!</legend>
+					<div class="uk-margin">
+						<label class="uk-form-label" for="form-stacked-select">Alface</label>
+						<div class="uk-form-controls">
+							<select class="uk-select" id="form-stacked-select"
+								ng-model="ingredientes.nome.alface">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+							</select>
+						</div>
+					</div>
+					<div class="uk-margin">
+						<label class="uk-form-label" for="form-stacked-select">Bacon</label>
+						<div class="uk-form-controls">
+							<select class="uk-select" id="form-stacked-select"
+								ng-model="ingredientes.nome.bacon">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+							</select>
+						</div>
+					</div>
+					<div class="uk-margin">
+						<label class="uk-form-label" for="form-stacked-select">Hambúrguer
+							de carne</label>
+						<div class="uk-form-controls">
+							<select class="uk-select" id="form-stacked-select"
+								ng-model="ingredientes.nome.hamburgerDeCarne">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+							</select>
+						</div>
+					</div>
+					<div class="uk-margin">
+						<label class="uk-form-label" for="form-stacked-select">Ovo</label>
+						<div class="uk-form-controls">
+							<select class="uk-select" id="form-stacked-select"
+								ng-model="ingredientes.nome.ovo">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+							</select>
+						</div>
+					</div>
+					<div class="uk-margin">
+						<label class="uk-form-label" for="form-stacked-select">Queijo</label>
+						<div class="uk-form-controls">
+							<select class="uk-select" id="form-stacked-select"
+								ng-model="ingredientes.nome.queijo">
+								<option selected="selected">0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+							</select>
+						</div>
+					</div>
+
+					<button type="submit" class="uk-button uk-button-primary">Finalizar Pedido</button>
+
+				</fieldset>
+			</form>
+
+			<br/>
+			<br/>
+			<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match">
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">
+						<h3 class="uk-card-title">Lista de Pedidos</h3>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-primary uk-card-body">
+						<p>{{postResultMessage}}</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+</html>
